@@ -2,7 +2,7 @@
 Author: Alexander Misel
 ]]
 local replylist = {
-  ['^表白vva$'] = '谢谢,谢谢，谢谢。'
+  ['^表白vva$'] = '谢谢,谢谢,谢谢。'
 }
 
 local cmd_replylist = {
