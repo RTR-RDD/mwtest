@@ -109,7 +109,7 @@ function linky(msg, group_id)
   end
 end
 
-local spamlist = { '翻墙', '梯子' }
+local spamlist = { '翻墙', '梯子','科学上网','kxsw','KXSW','VPN','fq','tz','FQ','TZ','vpn','虚拟混凝土','xnhnt','XNHNT'}
 
 local spamusers = {}
 
@@ -263,11 +263,11 @@ for k in pairs(enabled_groups) do
 end
 
 function requestFeed(group_id, str)
-  if os.time() - last_feed[group_id] > 60 then
+  if os.time() - last_feed[group_id] > 120 then
     feedserver:send(str)
   else
     sendToServer('GroupMessage ' .. group_id .. ' ' ..
-      mime.b64(u2g:iconv('条目推送功能每分钟只能用1次喔~')) .. ' 0')
+      mime.b64(u2g:iconv('条目推送功能每两分钟只能用一次喔~')) .. ' 0')
   end
 end
 
