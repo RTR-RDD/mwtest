@@ -2,11 +2,11 @@
 Author: Alexander Misel
 ]]
 local replylist = {
-  ['^表白vva$'] = '谢谢。'
+  ['^表白vva$'] = '谢谢,谢谢，谢谢。'
 }
 
 local cmd_replylist = {
-  ping = 'pong','pong','pong'
+  ping = 'pong,pong,pong'
   source = 'Viviane的源代码位于https://github.com/AlexanderMisel/mwtest ，以GPLv3协议自由使用，欢迎贡献代码。'
 }
 
