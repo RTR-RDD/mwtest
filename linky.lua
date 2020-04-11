@@ -92,7 +92,7 @@ function linky(msg, group_id)
       local send_str = 'https://' .. remote_url .. '/wiki/' .. Utils.urlEncode(trans_val)
       if trans_key:match('mirror') then
         send_str = send_str .. '\n这个网址是维基百科的镜像网站。可以登陆编辑。请注意，请勿在其他不明来源' ..
-                      '的镜像网站登录维基账号，否则账号可能被盗。'
+                      '的镜像网站登录维基账号，否则账号可能被盗哦。'
       end
       sendToServer('GroupMessage ' .. group_id .. ' ' .. mime.b64(u2g:iconv(send_str)) .. ' 0')
     else
@@ -109,7 +109,7 @@ function linky(msg, group_id)
   end
 end
 
-local spamlist = { '翻墙', '梯子'，'科学上网'，'虚拟混凝土'，'KSSW','kssw','fq','tz','VPN'}
+local spamlist = { '翻墙', '梯子'，'科学上网'，'虚拟混凝土'，'KXSW','kxsw','fq','tz','VPN','dl','DL','代理','袋理','vpn','xnhnt','XNHNT'}
 
 local spamusers = {}
 
@@ -263,11 +263,11 @@ for k in pairs(enabled_groups) do
 end
 
 function requestFeed(group_id, str)
-  if os.time() - last_feed[group_id] > 60 then
+  if os.time() - last_feed[group_id] > 120 then
     feedserver:send(str)
   else
     sendToServer('GroupMessage ' .. group_id .. ' ' ..
-      mime.b64(u2g:iconv('条目推送功能每分钟只能用1次喔~')) .. ' 0')
+      mime.b64(u2g:iconv('条目推送功能每两分钟只能用1次喔~')) .. ' 0')
   end
 end
 
@@ -315,7 +315,7 @@ function processGroupMsg(data)
       if at_qq == '10000' then
         last_atme = os.time()
         sendToServer('GroupMessage ' .. data[2] .. ' ' ..
-          mime.b64(u2g:iconv('我是群管机器人Viviane，我不是人工智能，不能聊天。[CQ:face,id=21]')) .. ' 0')
+          mime.b64(u2g:iconv('我是群管机器人Viviane，我不是人工智能，不能聊天哦。[CQ:face,id=21]')) .. ' 0')
       end
     end
   end
