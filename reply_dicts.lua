@@ -6,7 +6,7 @@ local replylist = {
 }
 
 local cmd_replylist = {
-  ping = 'pong',
+  ping = 'pong','pong','pong'
   source = 'Viviane的源代码位于https://github.com/AlexanderMisel/mwtest ，以GPLv3协议自由使用，欢迎贡献代码。'
 }
 
