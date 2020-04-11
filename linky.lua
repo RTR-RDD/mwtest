@@ -109,7 +109,7 @@ function linky(msg, group_id)
   end
 end
 
-local spamlist = { '翻墙', '梯子' }
+local spamlist = { '翻墙', '梯子','G F W','长 城','长  城','G  F  W','科学上网','KS','FQ',''TZ'，'科 学 上 网'}
 
 local spamusers = {}
 
